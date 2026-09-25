@@ -1,0 +1,44 @@
+rules:
+    - Shopwell\PhpStan\Rule\ClassExtendUsesAbstractClassWhenExisting
+    - Shopwell\PhpStan\Rule\DisallowDefaultContextCreation
+    - Shopwell\PhpStan\Rule\DisallowFunctionsRule
+    - Shopwell\PhpStan\Rule\DisallowSessionFunctionsRule
+    - Shopwell\PhpStan\Rule\ForbidGlobBraceRule
+    - Shopwell\PhpStan\Rule\InternalClassExtendsRule
+    - Shopwell\PhpStan\Rule\InternalFunctionCallRule
+    - Shopwell\PhpStan\Rule\InternalMethodCallRule
+    - Shopwell\PhpStan\Rule\MethodBecomesAbstractRule
+    - Shopwell\PhpStan\Rule\NoDALFilterByID
+    - Shopwell\PhpStan\Rule\NoSessionInPaymentHandlerAndStoreApiRule
+    - Shopwell\PhpStan\Rule\NoSymfonySessionInConstructorRule
+    - Shopwell\PhpStan\Rule\NoUserEntityGetStoreTokenRule
+    - Shopwell\PhpStan\Rule\ScheduledTaskTooLowIntervalRule
+    - Shopwell\PhpStan\Rule\SetForeignKeyRule
+    - Shopwell\PhpStan\Rule\NoEntityRepositoryInLoopRule
+    - Shopwell\PhpStan\Rule\NoSuperglobalsRule
+    - Shopwell\PhpStan\Rule\ForbidLocalDiskWriteRule
+    - Shopwell\PhpStan\Rule\BestPractise\PreferRouteEventRule
+    - Shopwell\PhpStan\Rule\BestPractise\DALDefinitionRule
+    - Shopwell\PhpStan\Rule\ForwardSalesChannelContextToSystemConfigServiceRule
+    - Shopwell\PhpStan\Rule\ForbidPredictableSaltRule
+    - Shopwell\PhpStan\Rule\ForbidWeakCryptoKeyRule
+    - Shopwell\PhpStan\Rule\ForbidInsecureCookieRule
+    - Shopwell\PhpStan\Rule\ForbidInsecureSymfonyCookieRule
+    - Shopwell\PhpStan\Rule\ForbidDisabledSslVerificationRule
+    - Shopwell\PhpStan\Rule\NoEmptyResponseRule
+
+services:
+    -
+        class: Shopwell\PhpStan\Type\CollectionHasSpecifyingExtension
+        tags:
+            - phpstan.typeSpecifier.methodTypeSpecifyingExtension
+
+    -
+        class: Shopwell\PhpStan\Collector\DALDefinitionCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: Shopwell\PhpStan\Collector\DALEntityCollector
+        tags:
+            - phpstan.collector
