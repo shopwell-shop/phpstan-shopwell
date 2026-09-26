@@ -111,4 +111,4 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for det
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Licensed under the Apache License 2.0. See [LICENSE](LICENSE) for the project license and [NOTICE](NOTICE) for the preserved upstream MIT license.
